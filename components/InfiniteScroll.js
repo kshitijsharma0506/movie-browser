@@ -3,6 +3,17 @@
 import { useEffect, useRef } from 'react'
 import useInfiniteScroll from '../lib/useInfiniteScroll'
 
+/**
+ * A React component that provides infinite scrolling functionality.
+ * It uses Intersection Observer API to detect when the user has scrolled to the bottom of the page.
+ * When the user scrolls down, it triggers a callback function to load more data.
+ *
+ * @param {Object} props - The component's props.
+ * @param {React.ReactNode} props.children - The child components to be rendered within the infinite scroll container.
+ * @param {Function} props.onLoadMore - A callback function that is triggered when the user scrolls to the bottom of the page.
+ *
+ * @returns {React.ReactElement} - The InfiniteScroll component with the specified children and loading indicator.
+ */
 function InfiniteScroll({ children, onLoadMore }) {
   const [isFetching, setIsFetching] = useInfiniteScroll(onLoadMore)
   const prevY = useRef(0)

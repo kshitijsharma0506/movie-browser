@@ -4,6 +4,20 @@ import { createContext, useContext, useState, useEffect } from 'react'
 
 const FavoritesContext = createContext()
 
+/**
+ * A React context provider component for managing favorite movie IDs.
+ * It uses the `useState` and `useEffect` hooks to handle the state and local storage synchronization.
+ *
+ * @param {Object} props - The component props.
+ * @param {React.ReactNode} props.children - The child components to be rendered within the provider.
+ *
+ * @returns {React.ReactElement} - The FavoritesProvider component with the context provider.
+ *
+ * @example
+ * <FavoritesProvider>
+ *   <App />
+ * </FavoritesProvider>
+ */
 export function FavoritesProvider({ children }) {
   const [favorites, setFavorites] = useState([])
 

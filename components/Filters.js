@@ -2,6 +2,16 @@
 
 import { useState } from 'react'
 
+/**
+ * A functional component that renders a set of filters for a movie listing.
+ * It manages the state of genre, year range, and rating range and triggers a callback function when filters are applied.
+ *
+ * @param {Object} props - The component's props.
+ * @param {Function} props.onFilterChange - A callback function that is triggered when filters are applied.
+ * It receives an object containing the current genre, year range, and rating range.
+ *
+ * @returns {JSX.Element} - The JSX element representing the Filters component.
+ */
 function Filters({ onFilterChange }) {
   const [genre, setGenre] = useState('')
   const [yearRange, setYearRange] = useState({ min: '', max: '' })

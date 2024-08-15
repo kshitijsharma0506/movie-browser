@@ -3,6 +3,14 @@
 import MovieCard from './MovieCard'
 import InfiniteScroll from './InfiniteScroll'
 
+/**
+ * A functional component that renders a list of movie cards using the InfiniteScroll component.
+ *
+ * @function MovieList
+ * @param {Object} props - The component's props.
+ * @param {Array} props.initialMovies - An array of movie objects to be displayed initially.
+ * @returns {JSX.Element} - A JSX element representing the movie list.
+ */
 function MovieList({ initialMovies }) {
   return (
     <InfiniteScroll>

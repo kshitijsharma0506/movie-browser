@@ -1,36 +1,42 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+```markdown
+# Movie Favorites App
+
+This is a simple Next.js application that allows users to manage their favorite movies. The application uses the `next/server` module for handling server-side requests and responses.
+
 ## Getting Started
 
-First, run the development server:
+1. Install the required dependencies:
+
+```bash
+npm install
+```
+
+2. Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at http://localhost:3000.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## API Endpoints
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The application provides the following API endpoints:
 
-## Learn More
+- `GET /api/favorites`: Retrieves the list of favorite movie IDs.
+- `POST /api/favorites`: Adds a movie to the favorites list. The request body should contain a JSON object with a `movieId` property.
+- `DELETE /api/favorites`: Removes a movie from the favorites list. The request body should contain a JSON object with a `movieId` property.
 
-To learn more about Next.js, take a look at the following resources:
+## Notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- In this example, the favorites are stored in memory and will be lost when the server restarts. For a real-world application, you would typically use a database to persist the favorites.
+- The code provided is a basic example and does not include any error handling or input validation. You may need to add additional logic as needed.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
+This project is licensed under the MIT License.
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Remember to replace the placeholder text with your actual project details.

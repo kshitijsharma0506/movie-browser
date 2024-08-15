@@ -1,6 +1,18 @@
 import Image from 'next/image'
 import { useFavorites } from '../context/FavoritesProvider'
 
+/**
+ * A functional component that renders a movie card with an image, title, release year, and a button to toggle favorites.
+ * 
+ * @param {Object} props - The component's props.
+ * @param {Object} props.movie - The movie object to be displayed in the card.
+ * @param {string} props.movie.id - The unique identifier of the movie.
+ * @param {string} props.movie.title - The title of the movie.
+ * @param {number} props.movie.releaseYear - The release year of the movie.
+ * @param {string} props.movie.poster - The URL of the movie poster.
+ * 
+ * @returns {JSX.Element} - The rendered movie card component.
+ */
 export default function MovieCard({ movie }) {
   const { favorites, toggleFavorite } = useFavorites()
   const isFavorite = favorites.includes(movie.id)
