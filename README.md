@@ -34,9 +34,3 @@ The application provides the following API endpoints:
 - In this example, the favorites are stored in memory and will be lost when the server restarts. For a real-world application, you would typically use a database to persist the favorites.
 - The code provided is a basic example and does not include any error handling or input validation. You may need to add additional logic as needed.
 
-## License
-
-This project is licensed under the MIT License.
-```
-
-Remember to replace the placeholder text with your actual project details.
